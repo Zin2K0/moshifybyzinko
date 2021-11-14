@@ -149,3 +149,28 @@ a {
     padding-left: 0;
   }
 }
+
+/* Icons  */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  /* use fill for svg icons */
+  fill: var(--color-primary);
+}
+
+/* spans are inline elements so you need to block but inline-block 
+will use in this, we need flex to justify the background and icon so 
+we use inline-flex instead of inline-block.*/
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
