@@ -423,3 +423,22 @@ we use inline-flex instead of inline-block.*/
     font-size: 1.6rem;
   }
 }
+
+/* Grids  */
+
+.grid {
+  display: grid;
+}
+
+/* we need to break side by side beside mobiles */
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
