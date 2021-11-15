@@ -166,9 +166,18 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon--primary {
   /* use fill for svg icons */
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
 }
 
 /* spans are inline elements so you need to block but inline-block 
@@ -182,6 +191,10 @@ we use inline-flex instead of inline-block.*/
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 /* Buttons  */
@@ -440,5 +453,63 @@ we use inline-flex instead of inline-block.*/
 @media screen and (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonial  */
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 375px) {
+  .testimonial__image > .icon-container {
+    position: absolute;
+    bottom: -10.5px;
+    right: 15rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .testimonial .quote {
+    margin: 10px;
+  }
+
+  .testimonial .quote__text {
+    font-size: 2rem;
+  }
+
+  .testimonial .quote__author {
+    font-size: 2rem;
+  }
+
+  .testimonial .quote__organization {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial__image > .icon-container {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+  }
+
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
   }
 }
