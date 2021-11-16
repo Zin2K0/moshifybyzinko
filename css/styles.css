@@ -32,6 +32,7 @@ body {
 h1,
 h2,
 h3 {
+  line-height: 1.1;
   color: var(--color-headings);
   margin-bottom: 1rem;
 }
@@ -450,13 +451,13 @@ we use inline-flex instead of inline-block.*/
 
 /* we need to break side by side beside mobiles */
 @media screen and (min-width: 768px) {
-  .grid {
+  .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .grid {
+  .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -691,5 +692,32 @@ we use inline-flex instead of inline-block.*/
 
   .nav__item {
     border: 0;
+  }
+}
+
+/* Hero  */
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+
+  .hero__content {
+    text-align: left;
+    align-self: center;
   }
 }
