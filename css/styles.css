@@ -635,6 +635,7 @@ we use inline-flex instead of inline-block.*/
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
