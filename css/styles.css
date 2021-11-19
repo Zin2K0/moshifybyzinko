@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
   color: var(--color-body);
 }
@@ -34,12 +34,12 @@ h2,
 h3 {
   line-height: 1.1;
   color: var(--color-headings);
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
 }
 
 h1 {
   /* 1x font size of the html element  */
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -47,14 +47,14 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 p {
   margin-top: 0;
 }
 
-@media script and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
   }
@@ -137,7 +137,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -206,7 +205,7 @@ we use inline-flex instead of inline-block.*/
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -293,6 +292,7 @@ we use inline-flex instead of inline-block.*/
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -767,17 +767,18 @@ we use inline-flex instead of inline-block.*/
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
   margin: 4rem auto;
-  min-width: 670px;
+  max-width: 670px;
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
-  min-width: 700px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -846,6 +847,7 @@ we use inline-flex instead of inline-block.*/
 /* Footer  */
 .footer {
   background: #232323;
+  padding-top: 10rem;
 }
 
 .footer a {
@@ -922,4 +924,9 @@ we use inline-flex instead of inline-block.*/
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+/* Sign-up Callout */
+.callout-signup {
+  transform: translateY(5rem);
 }
